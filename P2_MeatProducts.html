@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <meta charset="UTF-8">
+    <title>P2_Dairy Products</title>
+    <style>
+         * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            border-collapse: collapse;
+            margin: 50px;
+            padding: 20px;
+        }
+
+        header nav {
+            padding: 10px 30px 10px 30px;
+            word-spacing: 50px;
+            margin-bottom: 10px;
+
+        }
+
+        nav span {
+            border-width: 20px;
+        }
+
+        #cart {
+            float: right;
+            margin-left: 10px;
+        }
+
+        #delivery {
+            float: right;
+            margin-left: 10px;
+        }
+
+        nav button {
+            font-weight: bold;
+            line-height: 10px;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        #pickup {
+            float: right;
+        }
+        img {
+            height: 225px;
+            width: 350px;
+        }
+
+        .meat {
+            padding: 25px;
+            border-style: groove;
+            margin: 10px;
+            color: rgba(8, 8, 4, 0.856);
+            text-decoration: rgb(14, 12, 8);
+            font-size: 1.2em;
+            font-weight: bolder;
+            color: rgb(11, 12, 9);
+
+        }
+
+        h1 {
+            text-align: center;
+            background-color: #f4f4f4;
+            line-height: 2em;
+            color: black;
+            margin-top: 20px;
+        }
+
+        body {
+            background-color: none;
+            color: #080707;
+            backface-visibility: visible;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:link {
+            text-decoration-line: none;
+            color: rgb(12, 3, 4);
+        }
+
+        a:hover {
+            text-decoration-color: rgb(7, 5, 5);
+            border-style: outset;
+        }
+
+        a:active {
+            text-decoration-color: rgb(0, 0, 3);
+            text-decoration: none;
+        }
+
+        button {
+            cursor: pointer;
+        }
+
+        .button:hover {
+            text-decoration-line: underline;
+            padding: 2px
+        }
+
+        .button {
+            border-radius: 23px;
+            background-color: rgba(231, 224, 8, 0.856);
+            color: rgb(0, 0, 0);
+            padding: 2px;
+        }
+
+        hr {
+            margin-top: 10px;
+            font-size: 2px;
+        }
+
+        .each {
+            font-size: 0.8em;
+        }
+
+        form {
+            float: right;
+            margin-top: -1.5em;
+            margin-right: 1.5em;
+        }
+
+        nav form input {
+            margin-right: -4em;
+        }
+
+        footer {
+            background-color: rgba(231, 224, 8, 0.856);
+        }
+
+        footer a {
+            padding: 5px;
+            line-height: 2.5em;
+            margin: 1.2em;
+        }
+
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(231, 224, 8, 0.856);
+            color: black;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(231, 224, 8, 0.856);
+            line-height: 2.2em;
+        }
+
+        #title {
+            color: black;
+            font-size: 3em;
+            padding: 20px;
+            font-family: 'Fuggles', cursive;
+            font-weight: 600;
+        }
+    </style>
+    <script>function dosomething() {
+        window.location.href = "p4_cart.html";
+    }</script>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <span id="title"> Organo Freshista </span>
+        <nav>
+            <a href="index.html"><strong> <i>HOME</i></strong></a>
+            <a href=""><strong><i>PRODUCTS</i></strong></a>
+            <span id="cart"><button type="button" onclick="dosomething()">CART</button></span>
+            <span id="delivery"><button>DELIVERY</button></span>
+            <span id="pickup"><button>PICKUP</button></span><br />
+            
+            
+
+        </nav>
+    </header>
+
+    <h1><i>MEAT PRODUCTS</i></h1>
+
+    <div class="container">
+
+
+        <div class="meat">
+            <image
+                src="https://thumbs.dreamstime.com/b/raw-meat-beef-steak-green-rustic-table-raw-meat-beef-steak-green-rustic-table-background-164197668.jpg">
+                <br />
+                <a href="Beef.html"> BEEF
+            </image> <br />
+            </a>
+            <sub>2 pieces</sub>
+            <br />
+            <hr />
+            $11.57
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+        <div class="meat">
+            <image
+                src="https://st4.depositphotos.com/1004373/24392/i/600/depositphotos_243929562-stock-photo-fresh-chicken-meat-ingredients-cooking.jpg">
+                <br />
+                <a href="Chicken.html"> CHICKEN
+            </image><br />
+            </a>
+            <sub>4 pieces</sub>
+            <br />
+            <hr />
+            $7.00
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+        <div class="meat">
+            <image
+                src="https://st2.depositphotos.com/2287637/6003/i/600/depositphotos_60032125-stock-photo-raw-lamb-meat.jpg">
+                <br />
+                <a href="Lamb.html"> LAMB
+            </image> <br />
+            </a>
+            <sub>4 pieces</sub>
+            <br />
+            <hr />
+            $6.45
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+        <div class="meat">
+            <image
+                src="https://st2.depositphotos.com/3472015/7814/i/600/depositphotos_78144704-stock-photo-raw-fresh-meat.jpg">
+                <br />
+                <a href="Pork.html"> PORK
+            </image> <br />
+            </a>
+            <sub>2 pieces</sub>
+            <br />
+            <hr />
+            $3.56
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+        <div class="meat">
+            <image
+                src="https://thumbs.dreamstime.com/b/board-raw-turkey-ingredients-wooden-table-board-raw-turkey-ingredients-wooden-table-space-text-149090467.jpg">
+                <br />
+                <a href="Turkey.html"> TURKEY
+            </image> <br />
+            </a>
+            <sub>1 whole</sub>
+            <br />
+            <hr />
+            $5.75
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+        <div class="meat">
+            <image
+                src="https://img.freepik.com/free-photo/venison-raw-steak-from-wild-meat_89816-26851.jpg?size=626&ext=jpg&ga=GA1.2.1087057462.1625702400">
+                <br />
+                <a href="Venison.html"> VENISON
+            </image> <br />
+            </a>
+            <sub>2 piece</sub>
+            <br />
+            <hr />
+            $16.75
+            <br />
+            <button type="submit" class="button"> Add to cart </button>
+        </div>
+    </div>
+    <footer><nav class="footer"><a href="">Contact us</a>
+        <a href="">Help Center</a>
+<a href="">Find store</a></footer>
+
+</body>
+
+</html>

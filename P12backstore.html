@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>P12</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap" rel="stylesheet">
+    <STYLE>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(10, 1fr);
+            width: 100vw;
+            height: 100vh;
+        }
+
+        nav {
+            flex: 1;
+            /* background-color: lightblue;
+            border: 1px solid black; */
+            border-right:solid;
+        }
+        
+
+        main {
+            display: flex;
+            grid-row: 2 / 13;
+        }
+        
+        header{
+            background-color: rgb(3, 0, 44);
+            color: rgb(255, 115, 0);
+            text-align: center;
+            font-size: 3em;
+            grid-column: 1 / 14;
+            padding: 20px;
+            font-family: 'Fuggles', cursive;
+            font-weight: 600;
+        }
+
+        ul li{
+            padding: 1.2em;
+            background-color: rgb(197,0,49);
+            margin-top: 1.2em;
+
+        }
+        ol li{
+            line-height: 4em;    
+        }
+        a{
+            background-color: rgb(255, 115, 0) ;
+            color: rgb(3, 0, 44);
+            text-decoration-line: none;
+        }
+
+        form{
+            margin: 30px;
+            flex: 10;
+        }
+
+        
+
+        #delet{
+            margin-top: 20px;
+        }
+
+        span{
+            font-size: 1.2em;
+            font-weight: bold;
+            color:orange;
+        }
+
+        body{
+            background-image: url(https://images.unsplash.com/photo-1621091211034-53136cc1eb32?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fHNreSUyMGJhY2tncm91bmR8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60);
+            background-size: 2000px 800px;
+        }
+
+        button{
+            border-radius: 10px;
+            padding:5px;
+            cursor: pointer;
+            border-color: teal;
+        }
+        #save{
+            float: left;
+            padding: 0px 10px 0px 10px;
+            margin-top: 10px;
+        }
+        input{
+            padding:5px;
+        }
+
+    </STYLE>
+
+</head>
+
+<body>
+    <header> Organo Freshita </header>
+    <main>
+        <nav>
+            <ul>
+            <a href=""><li>Home</li></a>
+            <a href=""><li> MANAGE ACCOUNTS</li></a>
+            <a href="backstoreP11.html"><li> Back</li></a>
+        </ul></nav>
+        <form> 
+            <ol>
+                <span>Order List</span>
+                <li>2kg Apple <button>Delete item</button> </li>
+                <li>2lt Coke <button>Delete item</button> </li>
+                <li>4lt Milk  <button>Delete item</button> </li>
+                <li>500gr Tomato  <button>Delete item</button> </li>
+                <li>2un Cupcakes  <button>Delete item</button> </li>
+            </ol>
+            <input type="text" placeholder="Item name.." id="add"> <button>Add item</button> <br />
+            <button type="submit" id="save">  Save  </button>
+        </form>
+    </main>
+</body>
+
+</html>
