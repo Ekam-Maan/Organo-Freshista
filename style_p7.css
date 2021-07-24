@@ -17,7 +17,7 @@ header {
 
 
 table{
-    margin-left: 60px;
+    margin:20px 10%;
     border-spacing: 0;
 }
 h2{
@@ -30,7 +30,7 @@ height: 21px;
 }
 
 .add{
-    margin-left: 150px;
-    margin-top: 20px;
+    
+    margin: 20px 30%;
     width: 250px;
 }
