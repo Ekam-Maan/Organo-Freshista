@@ -9,9 +9,30 @@ header {
     font-weight: 600;
     margin-bottom:0;
 }
-body{
+
+caption{
+    margin-left:0;
+}
+
+table::before{
     
-    background: url(shopping-cart.png) no-repeat bottom right;
+    background: url(shopping-cart.png) no-repeat right;
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    z-index: -1;
+    opacity: 0.5;
+    
+    
+    
+}
+td{
+    text-align: center;
+    padding: 5px;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
 }
 img{
     float:right;
@@ -41,8 +62,9 @@ button{
 th, td{
     margin: 12px 12px 12px 12px;
 }
-.back{
-margin:5px;
+.back-long{
+margin-left:0;
+margin-right:5px;
 }
 
 h2 i{
