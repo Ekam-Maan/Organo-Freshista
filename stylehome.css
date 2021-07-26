@@ -3,11 +3,24 @@
     margin: 0;
     padding: 0;
 }
+
 div.footer{
     font-size: x-small;
     margin-top:100px;
     margin-bottom: 2px;
 }
+
+/* .container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+    
+} */
+
+.res{
+    width:100%;
+}
+
 #logo{
     margin: 15px 20px;
 }
@@ -107,6 +120,6 @@ section{
 /* setting the font size for all the text under the main class */
 .main{
     font-size: 1.8rem;
-    padding: 12px;
+    padding:0;
 }
 

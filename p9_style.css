@@ -8,7 +8,7 @@ header {
     font-family: 'Fuggles', cursive;
     font-weight: 600;
     margin-bottom:0;
-    
+    width:100%;
 }
 h2{
     margin-top:0px;
@@ -43,4 +43,21 @@ img.icon{
     margin:10px;
     padding:5px;
     color:rgb(39, 118, 163);
+    
+}
+.save-button{
+    margin:10px;
+    padding:5px;
+    color:black;
+    background-color: rgba(22, 219, 22, 0.658);
+    border-radius: 10px;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.container2{
+    display: flex;
+	justify-content: center;
 }
