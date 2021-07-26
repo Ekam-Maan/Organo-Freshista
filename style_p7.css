@@ -12,22 +12,9 @@ header {
     font-family: 'Fuggles', cursive;
     font-weight: 600;
 }
-
-.container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-
-}
-.bn{
-    display:flex;
-    justify-content: center;
-
-}
-
-
 table{
-    margin:20px 10%;
+    margin-left: 20%;
+    margin-right: 20% ;
     border-spacing: 0;
 }
 h2{
@@ -40,7 +27,14 @@ height: 21px;
 }
 
 .add{
-    
-    margin: 20px 30%;
     width: 250px;
+}
+.container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.bn{
+    display: flex;
+    justify-content: center;
 }
