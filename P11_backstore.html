@@ -9,7 +9,18 @@
         rel="stylesheet">
     <script>function dosomething() {
             window.location.href = "P12backstore.html";
-        }</script>
+        }
+        function delet(o){
+            var conf =confirm("This order will be canceled and will not be recovered..")
+            if(conf){     // event.target will be the input element.
+    //   var td = event.target.parentNode; 
+    //   var tr = td.parentNode; // the row to be removed
+              var p = o.parentNode.parentNode;  
+      p.parentNode.removeChild(p);
+            }
+
+        }
+        </script>
     <style>
         * {
             margin: 0px;
@@ -88,9 +99,18 @@
             border-radius: 10px;
             padding: 5px;
             cursor: pointer;
-            background-color: rgb(3, 0, 44);
-            color: rgb(255, 115, 0)
+            /* background-color: rgb(3, 0, 44); */
+            color: white;
         }
+        img.icon{
+            height:21px;
+        }
+        #edit{
+            height:21px;
+           color: white;
+           /* background-color: rgb(4,5,6); */
+        }
+
     </style>
     <link rel="icon"
         href="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfWzKHR8khU7lyYlGYyKXQY41NunTZx36Zm...f49Kh4H5FUOlVFRK4d43Sl6V4IThRph...zeEL9odBCA3k3VBFOQG">
@@ -106,25 +126,174 @@
                     <li>HOME</li>
                 </a>
                 <a href="p9.html">
-                    <li> MANAGE USERS</li>
+                    <li> MANAGE ACCOUNTS</li>
                 </a>
-                
+                <!-- <a href="backstoreP11.html">
+                    <li> BACK</li>
+                </a> -->
             </ul>
         </nav>
         <form>
-            <ol>
-                <span>Order List</span>
-                <li>2kg Apple </li>
-                <li>2lt Coke </li>
-                <li>4lt Milk </li>
-                <li>500gr Tomato </li>
-                <li>2un Cupcakes </li>
-            </ol>
-            <button type="button" onclick="dosomething()">Add items</button>
-            <button type="button" onclick="dosomething()">Delet items</button>
-            <button type="button" onclick="dosomething()">Edit order</button>
+        <table border=1 cellpadding="2">
+            <tr>
+                <th>Name</th>
+                <th>E-mail </th>
+                <!-- <th>Type</th>
+                <th>Phone#</th> -->
+    
+            </tr>
+    
+            <tr>
+                <td>Vraj Patel</td>
+                <td>vraj.patel@xyz.com</td>
+                <!-- <td>customer</td>
+                <td>514 768 2349</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" onclick="dosomething()"></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Sanyam Kadd</td>
+                <td>sanyam.kadd@xyz.com</td>
+                <!-- <td>employee</td>
+                <td>514 632 6351</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" onclick="dosomething()"></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+    
+            </tr>
+            <tr>
+                <td>Ghazaleh Mojbafan</td>
+                <td>Ghazaleh.mojabafan@xyz.com</td>
+                <!-- <td>customer</td>
+                <td>514 384 2349</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit"src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" onclick="dosomething()"></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon"  src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Gulnoor Kaur</td>
+                <td>gulnoor.kaur@xyz.com</td>
+                <!-- <td>customer</td>
+                <td>514 234 6396</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" onclick="dosomething()"></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Smit Desai</td>
+                <td>smit.desai@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Kevin Patel</td>
+                <td>kevinp97@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Luv Soni</td>
+                <td>luv.sl1@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Samir Trivedi</td>
+                <td>samir@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Srived</td>
+                <td>srived@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
 
-        </form>
+            <tr>
+                <td>Smit Desai</td>
+                <td>smit.desai@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr><tr>
+                <td>Meet</td>
+                <td>meet@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Bravo</td>
+                <td>bravo98@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr id = "mike">
+                <td>Mike</td>
+                <td>mike12@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete"></button></td>
+            </tr>
+            <tr>
+                <td>Smit Patel</td>
+                <td>smit.patel@gmail.com</td>
+                <!-- <td>employee</td>
+                <td>514 975 3569</td> -->
+                <td><button type="button" onclick="dosomething()"><img class="icon" id="edit" src="https://image.flaticon.com/icons/png/512/483/483923.png"
+                            alt="edit" ></button></td>
+                <td><button type="button" onclick="delet(this)"><img class="icon" src="https://image.flaticon.com/icons/png/128/812/812853.png"
+                            alt="delete" ></button></td>
+            </tr>
+
+            
+    
+        </table>
+        <!-- <button type="button" onclick="dosomething()">Add items</button>
+        <button type="button" onclick="dosomething()">Delet items</button>
+        <button type="button" onclick="dosomething()">Edit order</button> -->
+    </form>
+    </div>
+
     </main>
 </body>
 
