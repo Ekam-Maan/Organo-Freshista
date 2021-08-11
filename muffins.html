@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Muffins</title>
-    <style type="text/css">
+<style type="text/css">
         * {
             padding: 0px;
             margin: 0px;
         }
 
-        a {
-            text-decoration-line: none;
+        a{
+            text-decoration-line: none ;
             color: white;
         }
 
@@ -33,7 +32,7 @@
         img {
             float: left;
             margin: 50px 0px 0px 50px;
-            border-style: none;
+           border-style: none;
         }
 
         .name {
@@ -44,7 +43,7 @@
         }
 
         header {
-            padding: 10px 30px 10px 30px;
+            padding: 10px 30px 10px 30px ;
             word-spacing: 50px;
             background-color: rgba(58, 23, 122, 0.781);
             line-height: 2.2em;
@@ -65,8 +64,8 @@
             margin-top: 30px;
         }
 
-        #hr2 {
-            margin-top: 2px;
+        #hr2{
+            margin-top:2px;
             margin-bottom: 30px;
         }
 
@@ -81,150 +80,164 @@
             margin-top: 30px;
             margin-right: 5px;
         }
-
-        .container {
+        .container{
             display: flex;
         }
-
-        div image {
-            flex: 1;
+        div image{
+            flex:1 ;
 
         }
-
-        .item {
+        .item{
             display: grid;
         }
 
-        button {
+        button{
             padding: 10px;
-            cursor: pointer;
+            cursor: pointer ;
 
         }
-
-        #cart {
+        #cart{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
 
         }
-
-        #addcart {
-            color: cornsilk;
+        #addcart{
+            color:cornsilk;
             background-color: rgb(34, 35, 107);
         }
 
-        #delivery {
+        #delivery{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
         }
-
-        nav button {
+        nav button{
             font-weight: bold;
             line-height: 10px;
             border-radius: 10px;
         }
-
-        #pickup {
-            float: right;
+        #pickup{
+            float:right;
         }
 
-        input {
+        input{
             padding: 10px;
         }
 
-        form {
-            float: right;
-            margin-top: -1.5em;
-            margin-right: 1.5em;
+        form{
+            float:right;
+            margin-top:-1.5em;
+            margin-right:1.5em;
         }
-
-        nav form input {
+        nav form input{
             margin-right: -4em;
         }
-
-        footer {
+        footer{
             background-color: rgba(58, 23, 122, 0.781);
             margin-bottom: 0px;
         }
-
-        footer a {
+        footer a{
             padding: 5px;
             line-height: 2.5em;
             margin: 1.2em;
         }
-
         .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(58, 23, 122, 0.781);
-            color: white;
-            text-align: center;
-        }
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(58, 23, 122, 0.781);
+   color: white;
+   text-align: center;
+}
     </style>
-    <script>function dosomething() {
-            window.location.href = "p4_cart.html";
-        }</script>
-    <link rel="icon" href="https://thumbs.dreamstime.com/z/muffins-18983077.jpg">
+    <link rel="icon"
+        href="https://thumbs.dreamstime.com/z/muffins-18983077.jpg">
 
 
 
 </head>
-
 <body>
-    <header>
+ <header>
 
         <nav>
-            <a href="index.html">HOME</a>
-            <a href="login1.html">LOGIN</a>
-            <a href="signup.html">SIGNUP</a>
-            <span id="cart"><button type="button" onclick="dosomething()">CART</button></span>
-            <span id="delivery"><button>DELIVERY</button></span>
-            <span id="pickup"><button>PICKUP</button></span><br />
+            <a href="">HOME</a>
+            <a href="">AISLES</a>
+              <a href="login1.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <span id="cart"><button>Cart</button></span>
+            <span id="delivery"><button>Delivery</button></span>
+            <span id="pickup"><button>Pickup</button></span><br />
 
         </nav>
-    </header>
-    <form>
+ </header>
+      <form>
         <input type="text" placeholder="Search.....">
-        <button type="submit">Search</button>
+        <button type="submit" >Search</button>
     </form>
     <div class="container">
-        <image src="https://product-images.metro.ca/images/h16/h39/8860680552478.jpg" alt="This is muffins image."
-            width=355px height=420px>
-        </image>
-        <div class="item">
-            <span class="name">Berry delight muffins </span> <br /><sub>4 muffins,400G</sub></image> <br />
-            <br />
-            <span class="price">$4.99</span>
-            <br />
-            <sub>$1.25/100gr.</sub>
-            <br />
-            <div>
-                <input type="number" placeholder="Quan." min=0 max=5>
-                <button type="submit" id="addcart"> Add to Cart</button>
-            </div>
-            <hr id="hr1" />
-            <Details>
-                <summary>More Descriptions</summary> Start the day with these delicious duo berry muffins, with
-                cranberries and blueberries. These little treats are a taste explosion at breakfast or as a snack.
-            </Details>
-            <hr id="hr2" />
-            We strive to always offer you the most up-to-date product information. <br />
-            However, manufacturers may change this information at any time.<br />
-            We recommend that you read labels and packaging before consuming any<br />
-            product to ensure that you have the updated information regarding the ingredients,<br />
-            the nutritional values, as well as any allergy warnings.
-        </div>
-        <div class="foot">
-            <footer>
-                <nav class="footer"><a href="">Contact us</a>
-                    <a href="">Help Center</a>
-                    <a href="">Find store</a>
-                </nav>
-            </footer>
-
-        </div>
+    <image
+        src="https://product-images.metro.ca/images/h16/h39/8860680552478.jpg"
+        alt="This is muffins image." width=355px height=420px>
+    </image>
+        <div class= "item">
+    <span class="name">Berry delight muffins </span> <br /><sub>4 muffins,400G</sub></image> <br/>
+    <br />
+    <span class="price" id="product-price">$4.99</span>
+    <br />
+    <sub>$1.25/100gr.</sub>
+    <br />
+    <div>
+    <input type="number" placeholder="Quan." min=0 max=5 id="quantity">
+    <button type="submit" id="addcart"> Add to Cart</button>
     </div>
-</body>
+                                              <div id="myDiv">
+  <div class="quantity-container">
+  <span>1</span>
+  <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+</div>
 
+</div>
+    <hr id="hr1" />
+    <Details>
+        <summary>More Descriptions</summary> Start the day with these delicious duo berry muffins, with cranberries and blueberries. These little treats are a taste explosion at breakfast or as a snack.
+    </Details>
+    <hr id="hr2"/>
+    We strive to always offer you the most up-to-date product information. <br />
+    However, manufacturers may change this information at any time.<br />
+    We recommend that you read labels and packaging before consuming any<br />
+    product to ensure that you have the updated information regarding the ingredients,<br />
+    the nutritional values, as well as any allergy warnings.
+    </div>
+<div class="foot">
+<footer><nav class="footer"><a href="">Contact us</a>
+    <a href="">Help Center</a>
+    <a href="">Find store</a></nav></footer>
+
+</div></div>
+<script>
+    function increaseValue() {
+  var value = parseInt(document.getElementById('quantity').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('quantity').value = value;
+  price = '$'+`<span>${p * value}</span>`;
+  document.getElementById('product-price').innerHTML=price;
+}
+
+function decreaseValue() {
+  var value = parseInt(document.getElementById('quantity').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('quantity').value = value;
+  price = '$'+`<span>${p * value}</span>`;
+  document.getElementById('product-price').innerHTML=price;
+}
+var p='4.99';
+var price = '$'+`<span>${p}</span>`;
+document.getElementById('product-price').innerHTML=price;
+
+</script>
+</body>
 </html>

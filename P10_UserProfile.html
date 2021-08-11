@@ -117,23 +117,29 @@
             <div class="userform">
                 <div class="form" >
                     <label for="firstname">First Name: </label>
-                    <input type="text" name="firstname" placeholder="Enter First Name">
+                    <input type="text" name="firstname"  placeholder="Enter First Name" required>
                     <br>
                     <br>
                     <label for="lastname">Last Name: </label>
-                    <input type="text" name="lastname" placeholder="Enter Last Name">
+                    <input type="text" name="lastname"required placeholder="Enter Last Name">
                     <br><br>
                     <label for="confirmpassword">Confirm Password:  </label>
-                    <input type="password" name="confirmpassword" placeholder="Confirm Old Password">
+                    <input type="password" name="confirmpassword" required placeholder="Confirm Old Password">
                     <br><br>
                     <label for="password">New Password:  </label>
-                    <input type="password" name="password" placeholder="Enter New Password">
+                    <input type="password" name="password" required placeholder="Enter New Password">
                     <br><br>
                     <label for="email">E-mail:  </label>
-                    <input type="email" name="email" placeholder="user@domain.com">
+                    <input type="email" name="email" required placeholder="user@domain.com">
+                    <br><br>
+                    <label for="Phone">Phone Number:  </label>
+                    <input type="text" name="phone" required placeholder="Enter Phone number">
+                    <br><br>
+                    <label for="type">Type:  </label>
+                    <input type="text" name="type" required placeholder="Customer or Employee">
                 </div>
                 <br><br>
-            <button type="button" onclick="dosomething()">Save</button>
+            <button type="submit" >Save</button>
 
         </form>
     </main>

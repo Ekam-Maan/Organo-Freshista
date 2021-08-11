@@ -101,7 +101,10 @@
         #cart {
             float: right;
             margin-left: 10px;
+        }
 
+        #cart :hover{
+            text-decoration: underline;
         }
 
         #addcart {
@@ -171,6 +174,11 @@
             font-family: 'Fuggles', cursive;
             font-weight: 600;
         }
+        #Copyright{
+            font-size: 0.75em;
+            text-align: right;
+            margin-left: 900px;
+        }
     </style>
     <link rel="icon"
         href="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfWzKHR8khU7lyYlGYyKXQY41NunTZx36Zm...f49Kh4H5FUOlVFRK4d43Sl6V4IThRph...zeEL9odBCA3k3VBFOQG">
@@ -179,7 +187,36 @@
         rel="stylesheet">
     <script>function dosomething() {
             window.location.href = "p4_cart.html";
-        }</script>
+        }
+        function countcost(){
+            var quan = document.getElementById("Quantity").value;
+            var pr = 7.99;
+            if(quan%2==0)
+            {
+                var cost = (quan/2) * 4.00 ;
+            }
+            else{
+                var cost = quan * 2.29;
+            }
+            if(!isNaN(cost))
+            document.getElementById("total").innerHTML=cost;
+        }
+        function addproduct(){
+            var quan = document.getElementById("Quantity").value;
+            if(quan==0)
+            alert("Please add product/s.")
+            else if(quan==1)
+            alert("Product is added to the cart");
+            else
+            alert("Products are added to the cart");
+        }
+        function storeloc(){
+            alert("Our store locations are: 85 St Jutiq - Montreal , 78 Saint-Matric - Laval and 59 Point-Jean - Lachine ");
+        }
+        function contact(){
+            alert("You can call us on: 123-523-6541 \n You can also email us on organofreshista53@gmail.com");
+        }
+        </script>
 
 
 </head>
@@ -192,18 +229,18 @@
             <a href="login1.html">LOGIN</a>
             <a href="signup.html">SIGNUP</a>
             <a href="P2_Dairy Products.html">BACK</a>
-            <span id="cart"><button type="button" onclick="dosomething()">CART</button></span>
-            <span id="delivery"><button>DELIVERY</button></span>
-            <span id="pickup"><button>PICKUP</button></span><br />
+            <span id="cart"><button type="button" onclick="dosomething()">🛒 CART</button></span>
+            <!-- <span id="delivery"><button>DELIVERY</button></span>
+            <span id="pickup"><button>PICKUP</button></span><br /> -->
 
 
 
         </nav>
     </header>
-    <form>
+    <!-- <form>
         <input type="text" placeholder="Search.....">
         <button type="submit">Search</button>
-    </form>
+    </form> -->
     <div class="container">
         <image
             src="https://images.unsplash.com/photo-1560848119-ec9255fd285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjB8fDIlMjUlMjBtaWxrfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
@@ -217,8 +254,9 @@
             <sub>$0.47/100ml.</sub>
             <br />
             <div>
-                <input type="number" placeholder="Quan." min=0 max=5>
-                <button type="submit" id="addcart"> Add to Cart</button>
+                <input type="number" id = "Quantity" placeholder="Quan." min=0 max=5 onclick="countcost()">
+                <button type="submit" id="addcart" onclick = "addproduct()">🛒 Add to Cart</button>
+                <p> Subtotal= <b>$<span id = "total">0</span></b></p> 
             </div>
             <hr id="hr1" />
             <Details>
@@ -233,9 +271,12 @@
         </div>
         <div class="foot">
             <footer>
-                <nav class="footer"><a href="">Contact us</a>
-                    <a href="">Help Center</a>
-                    <a href="">Find store</a>
+                <nav class="footer">
+                    <a href="" onclick="contact()">Contact us</a>
+                    <!-- <a href="" onclick="help()">Help Center</a> -->
+                    <a href="" onclick="storeloc()">Find store</a>
+                    <sub id="Copyright">  © Copyright Team Orango Freshista        ® All rights reserved </sub>    
+                </nav>
             </footer>
         </div>
     </div>

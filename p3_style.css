@@ -76,3 +76,13 @@ button.back{
 div.footer{
     font-size: x-small;
 }
+p span#moreContent{ 
+    display: none;  
+}
+
+td.subtotal{
+    padding: 0 15px;
+}
+table{
+    margin-left: 10px;
+}

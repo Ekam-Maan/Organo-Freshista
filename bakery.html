@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Bakery</title>
-    <style>
+       <style>
         * {
             padding: 0px;
             margin: 0px;
         }
-
         .container {
             display: flex;
             flex-wrap: wrap;
@@ -19,41 +17,35 @@
             padding: 20px;
 
         }
-
-        header nav {
-            padding: 10px 30px 10px 30px;
+        header nav{
+            padding: 10px 30px 10px 30px ;
             word-spacing: 50px;
 
             margin-bottom: 10px;
             /* border-radius: 30px; */
         }
-
         nav span {
             border-width: 20px;
         }
-
-        #cart {
+        #cart{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
         }
 
-        #delivery {
+        #delivery{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
         }
-
-        nav button {
+        nav button{
             font-weight: bold;
             line-height: 10px;
             padding: 10px;
             border-radius: 10px;
         }
-
-        #pickup {
-            float: right;
+        #pickup{
+            float:right;
         }
-
-        /* nav span{
+/* nav span{
     border-width: 20px;
     font-size: 1.2em;
 } */
@@ -63,7 +55,7 @@
             width: 350px;
         }
 
-        .bakery {
+        .bakery{
             padding: 25px;
             border-style: groove;
             margin: 10px;
@@ -92,9 +84,8 @@
             color: #080707;
             backface-visibility: visible;
         }
-
-        nav a {
-            color: white;
+        nav a{
+            color:white;
         }
 
         a:link {
@@ -112,7 +103,7 @@
             text-decoration-color: rgb(0, 0, 3);
         }
 
-        button {
+        button{
             cursor: pointer;
         }
 
@@ -137,80 +128,72 @@
             font-size: 0.8em;
         }
 
-        form {
-            float: right;
-            margin-top: -1.5em;
-            margin-right: 1.5em;
+        form{
+            float:right;
+            margin-top:-1.5em;
+            margin-right:1.5em;
         }
-
-        nav form input {
+        nav form input{
             margin-right: -4em;
         }
-
-        footer {
+        footer{
             background-color: rgba(58, 23, 122, 0.781);
         }
-
-        footer a {
+        footer a{
             padding: 5px;
             line-height: 2.5em;
             margin: 1.2em;
         }
-
         .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(58, 23, 122, 0.781);
-            color: white;
-            text-align: center;
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(58, 23, 122, 0.781);
+   color: white;
+   text-align: center;
         }
-
-        header {
-            background-color: rgba(58, 23, 122, 0.781);
+        header{
+    background-color: rgba(58, 23, 122, 0.781);
             line-height: 2.2em;
-        }
-
-        #title {
-            color: rgb(255, 115, 0);
+}
+#title{
+    color: rgb(255, 115, 0);
             font-size: 3em;
             padding: 20px;
             font-family: 'Fuggles', cursive;
             font-weight: 600;
-        }
+}
     </style>
-    <script>function dosomething() {
-            window.location.href = "p4_cart.html";
-        }</script>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap" rel="stylesheet">
 
 </head>
-
 <body>
     <header>
         <span id="title"> Organo Freshita </span>
         <nav>
-            <a href="index.html">HOME</a>
-            <a href="login1.html">Login</a>
+            <a href="">HOME</a>
+            <a href="">AISLES</a>
+             <a href="login1.html">Login</a>
             <a href="signup.html">Signup</a>
-            <span id="cart"><button type="button" onclick="dosomething()">CART</button></span>
-            <span id="delivery"><button>DELIVERY</button></span>
-            <span id="pickup"><button>PICKUP</button></span><br />
+            <a href="bakery.html">Back</a>
+            <span id="cart"><button>Cart</button></span>
+            <span id="delivery"><button>Delivery</button></span>
+            <span id="pickup"><button>Pickup</button></span><br />
 
 
         </nav>
     </header>
-    <h1>Bread and Bakery Products</h1>
-    <div class="container">
+<h1>Bread and Bakery Products</h1>
+ <div class="container">
 
 
         <div class="bakery">
-            <image src="https://sob-prd-cdn-products.azureedge.net/media/image/product/en/medium/0062728600001.jpg">
+            <image
+                src="https://sob-prd-cdn-products.azureedge.net/media/image/product/en/medium/0062728600001.jpg" >
                 <br />
                 <a href="bagels.html"> Bagels
-                </a>
+                    </a>
             </image> <br />
 
             <sub>6UN-480gr</sub>
@@ -220,8 +203,9 @@
             <br />
             <button type="submit" class="button"> Add to cart </button>
         </div>
-        <div class="bakery">
-            <image src="https://product-images.metro.ca/images/hdb/hfd/9961696886814.jpg">
+      <div class="bakery">
+            <image
+                src="https://product-images.metro.ca/images/hdb/hfd/9961696886814.jpg">
                 <br />
                 <a href="butter.html"> Butter Chocolatines
             </image> <br />
@@ -233,11 +217,12 @@
             <br />
             <button type="submit" class="button"> Add to cart </button>
         </div>
-        <div class="bakery">
-            <image src="https://product-images.metro.ca/images/h10/hda/9033150136350.jpg">
+     <div class="bakery">
+            <image
+                src="https://product-images.metro.ca/images/h10/hda/9033150136350.jpg">
                 <br />
                 <a href="madeline.html"> Madeleine Cakes
-                </a>
+                    </a>
             </image> <br />
             </a>
             <sub>12 Un-280gr</sub>
@@ -247,8 +232,9 @@
             <br />
             <button type="submit" class="button"> Add to cart </button>
         </div>
-        <div class="bakery">
-            <image src="https://product-images.metro.ca/images/h16/h39/8860680552478.jpg">
+      <div class="bakery">
+            <image
+                src="https://product-images.metro.ca/images/h16/h39/8860680552478.jpg">
                 <br />
                 <a href="muffins.html"> Berry delight muffins
             </image> <br />
@@ -260,8 +246,9 @@
             <br />
             <button type="submit" class="button"> Add to cart </button>
         </div>
-        <div class="bakery">
-            <image src="https://product-images.metro.ca/images/h8e/h5f/8859791884318.jpg">
+      <div class="bakery">
+            <image
+                src="https://product-images.metro.ca/images/h8e/h5f/8859791884318.jpg">
                 <br />
                 <a href="cake.html"> Frozen Gluten Free Chocolate Torte
             </image> <br />
@@ -273,8 +260,9 @@
             <br />
             <button type="submit" class="button"> Add to cart </button>
         </div>
-        <div class="bakery">
-            <image src="https://product-images.metro.ca/images/h0f/he5/9519208529950.jpg">
+      <div class="bakery">
+            <image
+                src="https://product-images.metro.ca/images/h0f/he5/9519208529950.jpg">
                 <br />
                 <a href="englishm.html"> Plain English Muffins
             </image> <br />
@@ -287,13 +275,9 @@
             <button type="submit" class="button"> Add to cart </button>
         </div>
 
-        <footer>
-            <nav class="footer"><a href="">Contact us</a>
-                <a href="">Help Center</a>
-                <a href="">Find store</a>
-            </nav>
-        </footer>
-    </div>
+        <footer><nav class="footer"><a href="">Contact us</a>
+        <a href="">Help Center</a>
+            <a href="">Find store</a></nav></footer>
+ </div>
 </body>
-
 </html>
