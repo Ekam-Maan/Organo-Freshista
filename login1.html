@@ -231,7 +231,7 @@ span{
     <label for="pass"><b>Password</b></label>
     <input type="password" name="pass" id="pass" placeholder="Password" required>
     <br><br>
-   <button type="submit" id="log">Login here!</button>
+   <button type="submit" id="log" onclick="submission()">Login here!</button>
     <br><br>
     <input type="checkbox" id="check">
     <span>Remember me</span>
@@ -248,7 +248,8 @@ span{
     const Password=document.getElementById('pass')
     const form=document.getElementById('login')
     const errorElement=document.getElementById('error')
-    /*form.addEventListener('submit',(e) =>{
+    function submission{
+    form.addEventListener('submit',(e) =>{
         let messages=[]
         if (uname.value === '' || uname.value == null){
             messages.push('Name is required!')
@@ -262,12 +263,13 @@ span{
         }
 
 
-    }*/
+    }}
     let form = document.getElementsByTagName("login")[0];
     form.addEventListener("submit", (e) => {
         e.preventDefault();
        alert("Form Submitted!");
      });
+
 
 </script>
 </body>

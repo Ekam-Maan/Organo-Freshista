@@ -171,41 +171,62 @@
             font-family: 'Fuggles', cursive;
             font-weight: 600;
         }
-        #Copyright{
+
+        #Copyright {
             font-size: 0.75em;
             text-align: right;
             margin-left: 900px;
         }
-        #cart :hover{
+
+        #cart :hover {
             text-decoration: underline;
         }
     </style>
     <script>function dosomething() {
             window.location.href = "p4_cart.html";
         }
-        function countcost(){
+        function countcost() {
             var quan = document.getElementById("Quantity").value;
             var pr = 6.59;
-            var cost = quan * pr ;
-            if(!isNaN(cost))
-            document.getElementById("total").innerHTML=cost;
+            var cost = quan * pr;
+            if (!isNaN(cost))
+                document.getElementById("total").innerHTML = cost;
         }
-        function addproduct(){
-            var quan = document.getElementById("Quantity").value;
-            if(quan==0)
-            alert("Please add product/s.")
-            else if(quan==1)
-            alert("Product is added to the cart");
+        function addproduct() {
+            var quan = document.getElementById("input").value;
+            if (quan == 0)
+                alert("Please add product/s.")
+            else if (quan == 1)
+                alert("Product is added to the cart");
             else
-            alert("Products are added to the cart");
+                alert("Products are added to the cart");
         }
-        function storeloc(){
+        function storeloc() {
             alert("Our store locations are: 85 St Jutiq - Montreal , 78 Saint-Matric - Laval and 59 Point-Jean - Lachine ");
         }
-        function contact(){
+        function contact() {
             alert("You can call us on: 123-523-6541 \n You can also email us on organofreshista53@gmail.com");
         }
-        </script>
+        function mult(value) {
+            var x;
+            var value;
+            var tp;
+            x = 6.59 * value;
+            tp = parseFloat(x).toFixed(2);
+            document.getElementById('totalPrice').innerHTML = x;
+            // Store
+            sessionStorage.tp = tp;
+            sessionStorage.value = value;
+
+            // Retrieve
+            document.getElementById('input').value = sessionStorage.value;
+            document.getElementById('totalPrice').innerHTML = sessionStorage.tp;
+        }
+        window.onload = function () {
+            document.getElementById('input').value = sessionStorage.value;
+            document.getElementById('totalPrice').innerHTML = sessionStorage.tp;
+        }
+    </script>
     <link rel="icon"
         href="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfWzKHR8khU7lyYlGYyKXQY41NunTZx36Zm...f49Kh4H5FUOlVFRK4d43Sl6V4IThRph...zeEL9odBCA3k3VBFOQG">
     <title>Organo Freshista</title>
@@ -247,9 +268,13 @@
             <sub>$1.29/100gr.</sub>
             <br />
             <div>
-                <input type="number" id = "Quantity" placeholder="Quan." min=0 max=5 onclick="countcost()">
-                <button type="submit" id="addcart" onclick = "addproduct()">🛒 Add to Cart</button>
-                <p> Subtotal= <b>$<span id = "total">0</span></b></p> 
+                <lable for="quan"> Quantity: </lable>
+                <input type="number" min="0" max="99" name="quan" id="input" onchange="mult(this.value);">
+
+                <label for="tp">Total Price $</label>
+                <span id="totalPrice" name="tp">0.00</span><br />
+                <button type="submit" id="addcart" onclick="addproduct()">🛒 Add to Cart</button>
+                <!-- <p> Subtotal= <b>$<span id = "total">0</span></b></p>  -->
             </div>
             <hr id="hr1" />
             <Details>
@@ -268,7 +293,7 @@
                     <a href="" onclick="contact()">Contact us</a>
                     <!-- <a href="" onclick="help()">Help Center</a> -->
                     <a href="" onclick="storeloc()">Find store</a>
-                    <sub id="Copyright">  © Copyright Team Orango Freshista        ® All rights reserved </sub>    
+                    <sub id="Copyright"> © Copyright Team Orango Freshista ® All rights reserved </sub>
                 </nav>
             </footer>
         </div>

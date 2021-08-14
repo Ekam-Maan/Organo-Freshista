@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <style type="text/css">
+    <title>Butter</title>
+
+ <style type="text/css">
         * {
             padding: 0px;
             margin: 0px;
         }
 
-        a {
-            text-decoration-line: none;
+        a{
+            text-decoration-line: none ;
             color: white;
         }
 
@@ -32,7 +33,7 @@
         img {
             float: left;
             margin: 50px 0px 0px 50px;
-            border-style: none;
+           border-style: none;
         }
 
         .name {
@@ -42,9 +43,11 @@
             margin-top: 50px;
         }
 
-        header nav {
-            padding: 10px 30px 10px 30px;
+        header {
+            padding: 10px 30px 10px 30px ;
             word-spacing: 50px;
+            background-color: rgba(58, 23, 122, 0.781);
+            line-height: 2.2em;
             /* border-radius: 30px; */
         }
 
@@ -62,8 +65,8 @@
             margin-top: 30px;
         }
 
-        #hr2 {
-            margin-top: 2px;
+        #hr2{
+            margin-top:2px;
             margin-bottom: 30px;
         }
 
@@ -78,120 +81,161 @@
             margin-top: 30px;
             margin-right: 5px;
         }
-
-        .container {
+        .container{
             display: flex;
         }
-
-        div image {
-            flex: 1;
+        div image{
+            flex:1 ;
 
         }
-
-        .item {
+        .item{
             display: grid;
         }
 
-        button {
+        button{
             padding: 10px;
-            cursor: pointer;
+            cursor: pointer ;
 
         }
-
-        #cart {
+        #cart{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
 
         }
-
-        #addcart {
-            color: cornsilk;
+        #addcart{
+            color:cornsilk;
             background-color: rgb(34, 35, 107);
         }
 
-        #delivery {
+        #delivery{
             float: right;
-            margin-left: 10px;
+            margin-left:10px;
         }
-
-        nav button {
+        nav button{
             font-weight: bold;
             line-height: 10px;
             border-radius: 10px;
         }
-
-        #pickup {
-            float: right;
+        #pickup{
+            float:right;
         }
 
-        input {
+        input{
             padding: 10px;
         }
 
-        form {
-            float: right;
-            margin-top: -1.5em;
-            margin-right: 1.5em;
+        form{
+            float:right;
+            margin-top:-1.5em;
+            margin-right:1.5em;
         }
-
-        nav form input {
+        nav form input{
             margin-right: -4em;
         }
-
-        footer {
+        footer{
             background-color: rgba(58, 23, 122, 0.781);
             margin-bottom: 0px;
         }
-
-        footer a {
+        footer a{
             padding: 5px;
             line-height: 2.5em;
             margin: 1.2em;
         }
-
         .footer {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: rgba(58, 23, 122, 0.781);
-            color: white;
-            text-align: center;
-        }
-
-        header {
-            background-color: rgba(58, 23, 122, 0.781);
-            line-height: 2.2em;
-        }
-
-        #title {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: rgba(58, 23, 122, 0.781);
+   color: white;
+   text-align: center;
+}
+         #title {
             color: rgb(255, 115, 0);
-            font-size: 3em;
+            font-size: 2em;
             padding: 20px;
             font-family: 'Fuggles', cursive;
             font-weight: 600;
         }
-        #Copyright{
+           #Copyright{
             font-size: 0.75em;
             text-align: right;
             margin-left: 900px;
         }
-        #cart :hover{
-            text-decoration: underline;
-        }
     </style>
-    <script>function dosomething() {
+    <link rel="icon"
+        href="https://thumbs.dreamstime.com/z/chocolate-croissant-white-surface-selective-focus-32836008.jpg">
+
+
+
+</head>
+<body>
+ <header>
+<span id="title"> Organo Freshista </span>
+        <nav>
+            <a href="">HOME</a>
+            <a href="">AISLES</a>
+              <a href="login1.html">Login</a>
+            <a href="signup.html">Signup</a>
+            <span id="cart"><button>Cart</button></span>
+            <span id="delivery"><button>Delivery</button></span>
+            <span id="pickup"><button>Pickup</button></span><br />
+
+        </nav>
+ </header>
+      <form>
+        <input type="text" placeholder="Search.....">
+        <button type="submit" >Search</button>
+    </form>
+    <div class="container">
+    <image
+        src="https://product-images.metro.ca/images/hdb/hfd/9961696886814.jpg"
+        alt="This is choclatine image." width=355px height=420px>
+    </image>
+        <div class= "item">
+    <span class="name">Butter Chocolatines </span> <br /><sub>4 x 60G</sub></image> <br/>
+    <br />
+    <span class="price" id="product-price">$4.99</span>
+    <br />
+    <sub>$2.08/100gr.</sub>
+    <br />
+    <div>
+    <input type="number" placeholder="Quan." min=0 max=5 id="quantity" onclick="countcost()">
+    <button type="submit"  onclick="addproduct()"> Add to Cart</button>
+        <p> Subtotal= <b>$<span id = "total">0</span></b></p>
+    </div>
+
+    <hr id="hr1" />
+    <Details>
+        <summary>More Descriptions</summary> Collection Première Moisson all-butter chocolate croissants are made with flaky pastry generously filled with superior-quality dark chocolate. They’re at their finest when warmed in the oven to make the chocolate melt slightly.
+    </Details>
+    <hr id="hr2"/>
+    We strive to always offer you the most up-to-date product information. <br />
+    However, manufacturers may change this information at any time.<br />
+    We recommend that you read labels and packaging before consuming any<br />
+    product to ensure that you have the updated information regarding the ingredients,<br />
+    the nutritional values, as well as any allergy warnings.
+    </div>
+<div class="foot">
+<footer><nav class="footer" onclick="contact()"><a href="">Contact us</a>
+    <a href="">Help Center</a>
+    <a href="" onclick="storeloc()">Find store</a>
+ <sub id="Copyright">  © Copyright Team Orango Freshista        ® All rights reserved </sub>   </nav></footer>
+
+</div></div>
+
+  <script>function dosomething() {
             window.location.href = "p4_cart.html";
         }
         function countcost(){
-            var quan = document.getElementById("Quantity").value;
-            var pr = 2.99;
+            var quan = document.getElementById("quantity").value;
+            var pr = 4.99;
             var cost = quan * pr ;
             if(!isNaN(cost))
             document.getElementById("total").innerHTML=cost;
         }
         function addproduct(){
-            var quan = document.getElementById("Quantity").value;
+            var quan = document.getElementById("quantity").value;
             if(quan==0)
             alert("Please add product/s.")
             else if(quan==1)
@@ -206,75 +250,5 @@
             alert("You can call us on: 123-523-6541 \n You can also email us on organofreshista53@gmail.com");
         }
         </script>
-    <link rel="icon"
-        href="https://www.freelogoservices.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfWzKHR8khU7lyYlGYyKXQY41NunTZx36Zm...f49Kh4H5FUOlVFRK4d43Sl6V4IThRph...zeEL9odBCA3k3VBFOQG">
-    <title>Organo Freshista</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Fuggles&display=swap"
-        rel="stylesheet">
-
-
-</head>
-
-<body>
-    <header>
-        <span id="title"> Organo Freshista </span>
-        <nav>
-            <a href="index.html">HOME</a>
-            <a href="login1.html">LOGIN</a>
-            <a href="signup.html">SIGNUP</a>
-            <a href="P2_Dairy Products.html">BACK</a>
-            <span id="cart"><button type="button" onclick="dosomething()">🛒 CART</button></span>
-            <!-- <span id="delivery"><button>DELIVERY</button></span>
-            <span id="pickup"><button>PICKUP</button></span><br /> -->
-
-
-
-        </nav>
-    </header>
-    <!-- <form>
-        <input type="text" placeholder="Search.....">
-        <button type="submit">Search</button>
-    </form> -->
-    <div class="container">
-        <image
-            src="https://images.unsplash.com/photo-1603596310923-dbb12732f9c7?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8YnV0dGVyfGVufDB8fDB8fA==&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
-            alt="This is Butter image." width=235px height=220px>
-        </image>
-        <div class="item">
-            <span class="name"> Butter </span> <br /><sub>227gr</sub></image> <br />
-            <br />
-            <span class="price">$2.99 each</span>
-            <br />
-            <sub>$1.31/100gr.</sub>
-            <br />
-            <div>
-                <input type="number" id = "Quantity" placeholder="Quan." min=0 max=5 onclick="countcost()">
-                <button type="submit" id="addcart" onclick = "addproduct()">🛒 Add to Cart</button>
-                <p> Subtotal= <b>$<span id = "total">0</span></b></p> 
-            </div>
-            <hr id="hr1" />
-            <Details>
-                <summary>More Descriptions</summary> This is Pure Iris Butter.
-            </Details>
-            <hr id="hr2" />
-            We strive to always offer you the most up-to-date product information. <br />
-            However, manufacturers may change this information at any time.<br />
-            We recommend that you read labels and packaging before consuming any<br />
-            product to ensure that you have the updated information regarding the ingredients,<br />
-            the nutritional values, as well as any allergy warnings.
-        </div>
-        <div class="foot">
-            <footer>
-                <nav class="footer">
-                    <a href="" onclick="contact()">Contact us</a>
-                    <!-- <a href="" onclick="help()">Help Center</a> -->
-                    <a href="" onclick="storeloc()">Find store</a>
-                    <sub id="Copyright">  © Copyright Team Orango Freshista        ® All rights reserved </sub>    
-                </nav>
-            </footer>
-        </div>
-    </div>
 </body>
-
-
 </html>

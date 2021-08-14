@@ -223,10 +223,10 @@ button:hover {
         <a href="">Help Center</a>
             <a href="">Find store</a></nav></footer>
 <script>
-    let email=document.getElementById('email')
-    let phone=document.getElementById('phone')
-    let pass=document.getElementById('psw')
-    let pass2=document.getElementById('psw-repeat')
+    let email=document.getElementById("email")
+    let phone=document.getElementById("phone")
+    let pass=document.getElementById("psw")
+    let pass2=document.getElementById("psw-repeat")
     function validate() {
         let messages = []
         if (email.value === '' || email.value == null) {
@@ -238,10 +238,10 @@ button:hover {
         if (pass !== pass2) {
             messages.push('The password does not match , try again.')
         }
-        if (pass === '' || pass == null) {
+        if (pass == null) {
             messages.push('Please enter your password')
         }
-        if (pass2 === '' || pass2 == null) {
+        if ( pass2 == null) {
             messages.push('Please re-enter your password')
         }
     }
