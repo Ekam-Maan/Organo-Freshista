@@ -149,18 +149,6 @@
    color: white;
    text-align: center;
 }
-        #title {
-            color: rgb(255, 115, 0);
-            font-size: 2em;
-            padding: 20px;
-            font-family: 'Fuggles', cursive;
-            font-weight: 600;
-        }
-           #Copyright{
-            font-size: 0.75em;
-            text-align: right;
-            margin-left: 900px;
-        }
     </style>
     <link rel="icon"
         href="https://thumbs.dreamstime.com/z/traditional-madeleines-cakes-dusted-icing-sugar-207138322.jpg">
@@ -170,7 +158,7 @@
 </head>
 <body>
  <header>
-<span id="title"> Organo Freshista </span>
+
         <nav>
             <a href="">HOME</a>
             <a href="">AISLES</a>
@@ -199,11 +187,17 @@
     <sub>$1.50/100gr.</sub>
     <br />
     <div>
-    <input type="number" placeholder="Quan." min=0 max=5 id="quantity" onclick="countcost()">
-    <button type="submit" id="addcart" onclick="addproduct()"> Add to Cart</button>
-        <p> Subtotal= <b>$<span id = "total">0</span></b></p>
+    <input type="number" placeholder="Quan." min=0 max=5 id="quantity">
+    <button type="submit" id="addcart"> Add to Cart</button>
     </div>
+                                   <div id="myDiv">
+  <div class="quantity-container">
+  <span>1</span>
+  <div class="value-button" id="decrease" onclick="decreaseValue()" value="Decrease Value">-</div>
+  <div class="value-button" id="increase" onclick="increaseValue()" value="Increase Value">+</div>
+</div>
 
+</div>
     <hr id="hr1" />
     <Details>
         <summary>More Descriptions</summary>Made with whole eggs, these tea cakes will melt in your mouth. They are the ideal companion of your morning or afternoon snacks.
@@ -216,36 +210,34 @@
     the nutritional values, as well as any allergy warnings.
     </div>
 <div class="foot">
-<footer><nav class="footer" onclick="contact()"><a href="">Contact us</a>
+<footer><nav class="footer"><a href="">Contact us</a>
     <a href="">Help Center</a>
-    <a href="" onclick="storeloc()">Find store</a>
- <sub id="Copyright">  © Copyright Team Orango Freshista        ® All rights reserved </sub>   </nav></footer>
+    <a href="">Find store</a></nav></footer>
+
 </div></div>
-  <script>function dosomething() {
-            window.location.href = "p4_cart.html";
-        }
-        function countcost(){
-            var quan = document.getElementById("quantity").value;
-            var pr = 4.19;
-            var cost = quan * pr ;
-            if(!isNaN(cost))
-            document.getElementById("total").innerHTML=cost;
-        }
-        function addproduct(){
-            var quan = document.getElementById("quantity").value;
-            if(quan==0)
-            alert("Please add product/s.")
-            else if(quan==1)
-            alert("Product is added to the cart");
-            else
-            alert("Products are added to the cart");
-        }
-        function storeloc(){
-            alert("Our store locations are: 85 St Jutiq - Montreal , 78 Saint-Matric - Laval and 59 Point-Jean - Lachine ");
-        }
-        function contact(){
-            alert("You can call us on: 123-523-6541 \n You can also email us on organofreshista53@gmail.com");
-        }
-        </script>
+<script>
+    function increaseValue() {
+  var value = parseInt(document.getElementById('quantity').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value++;
+  document.getElementById('quantity').value = value;
+  price = '$'+`<span>${p * value}</span>`;
+  document.getElementById('product-price').innerHTML=price;
+}
+
+function decreaseValue() {
+  var value = parseInt(document.getElementById('quantity').value, 10);
+  value = isNaN(value) ? 0 : value;
+  value < 1 ? value = 1 : '';
+  value--;
+  document.getElementById('quantity').value = value;
+  price = '$'+`<span>${p * value}</span>`;
+  document.getElementById('product-price').innerHTML=price;
+}
+var p='4.19';
+var price = '$'+`<span>${p}</span>`;
+document.getElementById('product-price').innerHTML=price;
+
+</script>
 </body>
 </html>
